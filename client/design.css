@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', 'sans-serif';
+}
+body{
+	background-color: #fff;
+}
+section{
+	position: relative;
+	border: 1px solid #ccc;
+	height: 100vh;
+}
+.container{
+	border: 3px solid #4271c5;
+	max-width: 400px;
+	width: 100%;
+
+	
+	max-height: 120vh;
+	height: 110szz%;
+	display: grid;
+	flex-direction: column;
+	
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.container .head{
+	background-color: lightgreen;
+	height: 200px;
+	width: 100%;
+	border-radius: 0px 0px 20px 20px;
+}
+.head .time{
+	margin-top: 2px;
+	margin-left: 15px;
+}
+.head .network{
+	width: 3px;
+	margin-left: 310px;
+	top: 0;
+}
+.head .greeting{
+	padding-bottom: 20px;
+	margin-bottom: -30px;
+
+}
+
+.container .card{
+	background: linear-gradient(to top, rgba(0, 1, 0, 1.0), #4271c5);
+	height: 170px;
+	max-width: 350px;
+	width: auto;
+	border-radius: 28px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+	margin: 19px;
+}
+.logo h5{
+	padding-top: 13px;
+	margin-left: 15px;
+}
+.logo img{
+	width: 13px;
+	margin-left: 8px;
+	padding-top: 10px;
+}
+.logo .more{
+	position: absolute;
+	margin-left: 315px;
+	margin-top: 15px;
+}
+.content{
+	position: absolute;
+	margin-top: -130px;
+	margin-left: -20px;
+	display: flex;
+}
+.footer button{
+	color:#fff; 
+	background: linear-gradient(to left, rgba(0, 1, 0, 0.6), #4271c5);
+	border: 2px solid #4271c5;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	text-size-adjust: 30px;
+	margin-left: 170px;
+	margin-top: -20px;
+	height: 65px;
+	width: 65px;
+	font-size: 40px;
+}
