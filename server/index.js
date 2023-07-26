@@ -2,12 +2,14 @@ const express = require('express')
 const mongoose = require('mongoose')
 const expenseSchema = require('./Models/expense')
 const bodyParser = require('body-parser')
+const cors = require('cors');
 
 const expenseModel = mongoose.model('Expense', expenseSchema)
 
 const app = express()
 
 app.use(bodyParser.urlencoded({extended: false}))
+app.use(cors())
 
 const mongoDbAccess = "mongodb+srv://Scotty237:nctKBGdie9xDXYwA@cluster0.ppogrb1.mongodb.net/"
 
@@ -19,8 +21,13 @@ app.listen(port, () => {
     console.log("Hello, you are listening to port" + port)
 })
 
-app.get('/', (req, res) => console.log(res.send("Welcome to our web server")))
-
+app.get("/", (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Max-Age", "1800");
+    res.setHeader("Access-Control-Allow-Headers", "content-type");
+    res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
+     });
 // a. GET /expenses to retrieve all data from the db
 
 app.get('/expenses', async (req, res) => {
