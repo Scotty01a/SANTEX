@@ -13,7 +13,7 @@ const mongoDbAccess = "mongodb+srv://Scotty237:nctKBGdie9xDXYwA@cluster0.ppogrb1
 
 mongoose.connect(mongoDbAccess, { useNewUrlParser: true}).then(() => console.log("connected to the database")).catch((e) => console.log(e))
 
-const port = 3000
+const port = 3001
 
 app.listen(port, () => {
     console.log("Hello, you are listening to port" + port)
